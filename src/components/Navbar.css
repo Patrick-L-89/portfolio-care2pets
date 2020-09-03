@@ -1,0 +1,21 @@
+.flex-column {
+  width: 100px;
+  height: 600 px;
+  text-align: left;
+  border-style: solid;
+  border-color: green;
+  border-width: 10px 10px 10px 0px;
+  padding: 50px;
+  margin-left: -100;
+  position: sticky;
+}
+
+li {
+  font-size: 20px;
+  margin: 0 px 0 px 15px 0px;
+  list-style-type: none;
+  text-align: left;
+  margin-left: -75px;
+  margin-bottom: 20px;
+  position: sticky;
+}

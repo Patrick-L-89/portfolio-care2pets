@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
+import Nearbyvets from "./pages/NearbyVets/NearbyVets";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +13,14 @@ function App() {
       </div>
       <div className="second">
         <div className="App">
-          <Homepage />
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route path="/nearbyvets">
+              <Nearbyvets />
+            </Route>
+          </Switch>
         </div>
       </div>
     </div>

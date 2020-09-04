@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -11,7 +12,9 @@ export default function Navbar() {
       />
       <ul>
         <li>TODO: search for caretakers</li>
-        <li>TODO: link to nearby vets</li>
+        <li>
+          <Link to="/nearbyvets">Veterinarians near you</Link>
+        </li>
         <li>TODO: link to nearby petshops</li>
         <li>TODO: about us</li>
       </ul>

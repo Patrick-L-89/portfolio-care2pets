@@ -4,10 +4,17 @@
   text-align: left;
   border-style: solid;
   border-color: green;
-  border-width: 10px 10px 10px 0px;
+  border-width: 0px 10px 10px 0px;
   padding: 50px;
   margin-left: -100;
   position: sticky;
+}
+
+.logo {
+  padding: 5px;
+  width: 150px;
+  margin-left: 10px;
+  float: left;
 }
 
 li {

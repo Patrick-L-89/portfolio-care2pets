@@ -18,7 +18,7 @@ export default function Homepage() {
 
   const caretakerList = caretakers;
 
-  console.log("what are my caretakers?", caretakers);
+  //console.log("what are my caretakers?", caretakers);
 
   if (caretakerList === undefined) return "loading";
 
@@ -27,7 +27,7 @@ export default function Homepage() {
       <h1>Welcome to Care2Pets</h1>
       <div className="outerCaretakerBox">
         {caretakerList.map((caretaker) => {
-          console.log("WHAT IS A CARETAKER", caretaker);
+          //console.log("WHAT IS A CARETAKER", caretaker);
           return (
             <CaretakerList
               key={caretaker.id}

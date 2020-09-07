@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Input.css";
+
 export default function Input({ message, set_message, sendMessage }) {
   return (
     <form className="form">

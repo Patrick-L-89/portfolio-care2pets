@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 import InfoBar from "../InfoBar/InfoBar";
+import Input from "../Input/Input";
 
 import "./Chatroom.css";
 
@@ -50,13 +51,7 @@ export default function Chatroom({ location }) {
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />
-        <input
-          value={message}
-          onChange={(event) => set_message(event.target.value)}
-          onKeyPress={(event) =>
-            event.key === "Enter" ? sendMessage(event) : null
-          }
-        />
+        <Input />
       </div>
     </div>
   );

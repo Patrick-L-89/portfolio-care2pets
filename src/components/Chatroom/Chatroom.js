@@ -17,7 +17,12 @@ export default function Chatroom({ location }) {
     set_name(name);
     set_room(room);
 
-    socket.emit("join", { name, room });
+    socket.emit("join", { name, room }, ({ error }) => {});
+
+    return () => {
+      socket.emit("disconnect");
+      socket.off();
+    };
   }, [endPoint, location.search]);
 
   return <div>This will be the Chatroom</div>;

@@ -4,6 +4,7 @@ import io from "socket.io-client";
 import InfoBar from "../InfoBar/InfoBar";
 import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
+import TextContainer from "../Textcontainer/Textcontainer";
 
 import "./Chatroom.css";
 
@@ -14,6 +15,7 @@ export default function Chatroom({ location }) {
   const [room, set_room] = useState("");
   const [message, set_message] = useState("");
   const [messages, set_messages] = useState([]);
+  const [users, setUsers] = useState("");
   const endPoint = `localhost:4000`; //TODO: CHANGE WHEN UPLOAD
 
   useEffect(() => {
@@ -35,6 +37,10 @@ export default function Chatroom({ location }) {
   useEffect(() => {
     socket.on("message", (message) => {
       set_messages([...messages, message]);
+    });
+
+    socket.on("roomData", ({ users }) => {
+      setUsers(users);
     });
   }, [messages]);
 
@@ -59,6 +65,7 @@ export default function Chatroom({ location }) {
           sendMessage={sendMessage}
         />
       </div>
+      <TextContainer users={users} />
     </div>
   );
 }

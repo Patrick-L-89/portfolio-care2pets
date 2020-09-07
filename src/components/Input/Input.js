@@ -1,20 +1,21 @@
 import React from "react";
 
-export default function Input() {
+export default function Input({ message, set_message, sendMessage }) {
   return (
     <form className="form">
       <input
         className="input"
         type="text"
-        placeholder="Your message here"
+        placeholder="Type a message..."
         value={message}
         onChange={(event) => set_message(event.target.value)}
         onKeyPress={(event) =>
           event.key === "Enter" ? sendMessage(event) : null
         }
-      >
-        <button></button>
-      </input>
+      />
+      <button className="sendButton" onClick={(e) => sendMessage(e)}>
+        Send
+      </button>
     </form>
   );
 }

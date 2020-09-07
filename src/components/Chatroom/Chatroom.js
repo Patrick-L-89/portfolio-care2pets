@@ -51,7 +51,11 @@ export default function Chatroom({ location }) {
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />
-        <Input />
+        <Input
+          message={message}
+          set_message={set_message}
+          sendMessage={sendMessage}
+        />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Join() {
   return (
     <div className="joinOuterContainer">
       <div className="JoinInnerContainer">
-        <h1 className="heading">fill this in to continue:</h1>
+        <h1 className="heading">Fill this in to continue:</h1>
         <div>
           <input
             placeholder="User name"

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import CaretakerList from "./../../components/CaretakerList/CaretakerList";
-import "./Homepage.css";
 
 export default function Homepage() {
   const dispatch = useDispatch();

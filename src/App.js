@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
-import Nearbyvets from "./pages/NearbyVets/NearbyVets";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Join from "./components/Join/Join";
 import Chatroom from "./components/Chatroom/Chatroom";

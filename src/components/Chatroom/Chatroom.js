@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
+import InfoBar from "../InfoBar/InfoBar";
 
 import "./Chatroom.css";
 
@@ -47,7 +48,8 @@ export default function Chatroom({ location }) {
 
   return (
     <div className="outerContainer">
-      <div className="innerContainer">
+      <div className="container">
+        <InfoBar room={room} />
         <input
           value={message}
           onChange={(event) => set_message(event.target.value)}

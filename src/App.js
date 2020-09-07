@@ -3,7 +3,9 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
 import Nearbyvets from "./pages/NearbyVets/NearbyVets";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Join from "./components/Join/Join";
+import Chatroom from "./components/Chatroom/Chatroom";
 
 function App() {
   return (
@@ -13,14 +15,13 @@ function App() {
       </div>
       <div className="second">
         <div className="App">
-          <Switch>
+          <Router>
             <Route exact path="/">
               <Homepage />
             </Route>
-            <Route path="/nearbyvets">
-              <Nearbyvets />
-            </Route>
-          </Switch>
+            <Route path="/join" component={Join}></Route>
+            <Route path="/chatroom" component={Chatroom}></Route>
+          </Router>
         </div>
       </div>
     </div>

@@ -25,6 +25,15 @@ export default function Join() {
             onChange={(event) => set_room(event.target.value)}
           />
         </div>
+        <link
+          onClick={(event) => (!name || !room ? event.preventDefault() : null)}
+          to={`/chatroom?name=${name}&room=${room}`}
+        >
+          <button classname="button" type="submit">
+            {" "}
+            Join the chat!
+          </button>
+        </link>
       </div>
     </div>
   );

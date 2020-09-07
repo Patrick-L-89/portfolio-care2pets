@@ -1,5 +1,5 @@
 .flex-column {
-  width: 100px;
+  width: 150px;
   height: 600 px;
   text-align: left;
   border-style: solid;
@@ -10,10 +10,10 @@
   position: sticky;
 }
 
-.logo {
+.logo img {
   padding: 5px;
   width: 150px;
-  margin-left: 10px;
+  margin-left: 20px;
   float: left;
 }
 

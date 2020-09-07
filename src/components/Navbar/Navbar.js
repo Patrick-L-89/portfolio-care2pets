@@ -3,11 +3,12 @@ import Nav from "react-bootstrap/Nav";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
+import logo from "../../Icons/logo.png";
+
 export default function Navbar() {
   return (
     <div className="logo">
-      <img src="http://127.0.0.1:8887/logo.png" alt="my awesome logo" />
-
+      <img src={logo} alt="My amazing logo" />
       <Nav.Item className="flex-column">
         <ul>
           <li>TODO: search for caretakers</li>

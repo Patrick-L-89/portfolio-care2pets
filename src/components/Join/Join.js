@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import "./Join.css";
+
 export default function Join() {
   const [name, set_name] = useState("");
   const [room, set_room] = useState("");

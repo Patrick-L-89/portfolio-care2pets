@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import CaretakerList from "./../../components/CaretakerList/CaretakerList";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 export default function Homepage() {
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ export default function Homepage() {
 
   return (
     <div>
-      <h1>Welcome to Care2Pets</h1>
+      <Jumbotron>
+        <h1>Welcome to Care 2 Pets</h1>
+      </Jumbotron>
       <div className="outerCaretakerBox">
         {caretakerList.map((caretaker) => {
           //console.log("WHAT IS A CARETAKER", caretaker);

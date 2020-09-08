@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import Navbar from "./components/Navbar";
+import { Switch, Route } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (

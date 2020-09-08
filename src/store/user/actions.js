@@ -14,8 +14,7 @@ const loginSuccess = (userWithToken) => {
 };
 
 export const signUp = (
-  firstName,
-  lastName,
+  fullName,
   userName,
   email,
   password,
@@ -30,9 +29,8 @@ export const signUp = (
   return async (dispatch, getState) => {
     dispatch(appLoading());
     try {
-      const response = await axios.post(`http://localhost:4000/signup`, {
-        firstName,
-        lastName,
+      const response = await axios.post(`http://localhost:4000/user/signup`, {
+        fullName,
         userName,
         email,
         password,

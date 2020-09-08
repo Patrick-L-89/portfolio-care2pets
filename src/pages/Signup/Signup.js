@@ -9,8 +9,7 @@ import { useHistory, Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
 
 export default function SignUp() {
-  const [firstName, set_firstName] = useState("");
-  const [lastName, set_lastName] = useState("");
+  const [fullName, set_fullName] = useState("");
   const [userName, set_userName] = useState("");
   const [email, set_email] = useState("");
   const [password, set_password] = useState("");
@@ -36,8 +35,7 @@ export default function SignUp() {
 
     dispatch(
       signUp(
-        firstName,
-        lastName,
+        fullName,
         userName,
         email,
         password,
@@ -51,14 +49,13 @@ export default function SignUp() {
       )
     );
 
-    set_firstName("");
-    set_lastName("");
+    set_fullName("");
     set_userName("");
     set_email("");
     set_password("");
     set_streetName("");
     set_city("");
-    set_houseNumber("");
+    set_houseNumber(0);
     set_phoneNumber(" ");
     set_isCaretaker(false);
     set_animalTypesInterested("");
@@ -70,22 +67,12 @@ export default function SignUp() {
       <Form as={Col} md={{ span: 6, offset: 3 }} className="mt-5">
         <h1 className="mt-5 mb-5">Signup</h1>
         <Form.Group controlId="formBasicName">
-          <Form.Label>Firstname</Form.Label>
+          <Form.Label>Full name</Form.Label>
           <Form.Control
-            value={firstName}
-            onChange={(event) => set_firstName(event.target.value)}
+            value={fullName}
+            onChange={(event) => set_fullName(event.target.value)}
             type="text"
-            placeholder="Enter your first name"
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formBasicName">
-          <Form.Label>Lastname</Form.Label>
-          <Form.Control
-            value={lastName}
-            onChange={(event) => set_lastName(event.target.value)}
-            type="text"
-            placeholder="Enter your last name"
+            placeholder="Enter your full name"
             required
           />
         </Form.Group>
@@ -115,7 +102,6 @@ export default function SignUp() {
               onChange={(event) => set_streetName(event.target.value)}
               type="text"
               placeholder="Enter your streetname"
-              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicName">
@@ -135,7 +121,6 @@ export default function SignUp() {
               onChange={(event) => set_houseNumber(event.target.value)}
               type="text"
               placeholder="Enter your housenumber and extension"
-              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicName">
@@ -145,7 +130,6 @@ export default function SignUp() {
               onChange={(event) => set_phoneNumber(event.target.value)}
               type="number"
               placeholder="Enter your phonenumber"
-              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
@@ -168,7 +152,6 @@ export default function SignUp() {
               value={isCaretaker}
               onChange={(event) => set_isCaretaker(isCaretaker ? false : true)}
               type="checkbox"
-              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicName">
@@ -190,7 +173,6 @@ export default function SignUp() {
               onChange={(event) => set_description(event.target.value)}
               type="text"
               placeholder="Enter a description of yourself for others to see"
-              required
             />
           </Form.Group>
         </Form.Group>

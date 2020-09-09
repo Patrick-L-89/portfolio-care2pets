@@ -7,10 +7,8 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log("STEP 6: OFF COURSE THE REDUCER RUNS");
   switch (action.type) {
     case LOGIN_SUCCESS:
-      console.log("STEP 7: DOES THE CASE RUN?");
       localStorage.setItem("token", action.payload.token);
       return { ...state, ...action.payload };
 

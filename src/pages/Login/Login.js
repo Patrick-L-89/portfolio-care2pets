@@ -24,9 +24,6 @@ export default function Login() {
   function submitForm(event) {
     console.log("hi");
     event.preventDefault();
-    console.log(
-      "step 2: useEffect fires to ask the redux store to get the data"
-    );
 
     dispatch(login(email, password));
 

@@ -70,18 +70,13 @@ export const signUp = (
 };
 
 export const login = (email, password) => {
-  console.log("THIS IS STEP 3, STILL RUNNING GOOD");
   return async (dispatch, getState) => {
-    console.log(
-      "THIS IS STEP 4: redux is (trying to) get the data from the api"
-    );
     dispatch(appLoading());
     try {
       const response = await axios.post(`http://localhost:4000/user/login`, {
         email,
         password,
       });
-      console.log("THIS IS STEP 5: receiving the data from the api", response);
 
       dispatch(loginSuccess(response.data));
       dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));

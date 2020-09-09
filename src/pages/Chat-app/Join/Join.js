@@ -7,6 +7,8 @@ export default function Join() {
   const [name, set_name] = useState("");
   const [room, set_room] = useState("");
 
+  console.log("WHAT IS THE ROOM????");
+
   return (
     <div className="joinOuterContainer">
       <div className="JoinInnerContainer">
@@ -18,6 +20,15 @@ export default function Join() {
             type="text"
             onChange={(event) => set_name(event.target.value)}
           />
+        </div>
+        <div>
+          <label for="cars">Choose a chatroom:</label>
+          <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
         </div>
         <div>
           <input

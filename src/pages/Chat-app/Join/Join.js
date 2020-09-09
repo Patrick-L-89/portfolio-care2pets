@@ -22,21 +22,22 @@ export default function Join() {
           />
         </div>
         <div>
-          <label for="cars">Choose a chatroom:</label>
-          <select id="cars" name="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-          </select>
-        </div>
-        <div>
-          <input
-            placeholder="Chatroom"
-            className="joininput"
-            type="text"
+          <select
+            value={room}
             onChange={(event) => set_room(event.target.value)}
-          />
+          >
+            Choose a chatroom:
+            <option selected disabled value="choose a room"></option>
+            <option value="general">General</option>
+            <option value="birds">Birds</option>
+            <option value="bugs">Bugs</option>
+            <option value="snakes">Snakes</option>
+            <option value="turtles">Turtles</option>
+            <option value="otherreptiles">Other reptiles</option>
+            <option value="mammals">Mammals</option>
+            <option value="fish">Fish</option>
+            <option value="otheranimals">Other animals</option>
+          </select>
         </div>
         <Link
           onClick={(event) => (!name || !room ? event.preventDefault() : null)}

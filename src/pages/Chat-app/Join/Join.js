@@ -15,7 +15,7 @@ export default function Join() {
     <div className="joinOuterContainer">
       <div className="JoinInnerContainer">
         <h1 className="heading">Fill this in to continue:</h1>
-        <div>
+        <div className="userNameText">
           {token ? (
             (name = user.userName)
           ) : (

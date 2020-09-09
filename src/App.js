@@ -28,7 +28,7 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/caretaker" component={Caretakers} />
+          <Route exact path="/caretakers" component={Caretakers} />
           <Route exact path="/joinchat" component={Join} />
           <Route path="/chatroom" component={Chatroom} />
           <Route exact path="/about" component={Aboutpage} />

@@ -1,25 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../store/user/selectors";
+import { selectToken } from "../../../store/user/selectors";
 
 import "./Join.css";
 
 export default function Join() {
-  const [name, set_name] = useState("");
+  let [name, set_name] = useState("");
   const [room, set_room] = useState("");
+  const user = useSelector(selectUser);
+  const token = useSelector(selectToken);
 
-  console.log("WHAT IS THE ROOM????");
+  console.log("WHAT IS THE name????", name);
+  console.log("what is the username", user.userName);
 
   return (
     <div className="joinOuterContainer">
       <div className="JoinInnerContainer">
         <h1 className="heading">Fill this in to continue:</h1>
         <div>
-          <input
-            placeholder="User name"
-            className="joininput"
-            type="text"
-            onChange={(event) => set_name(event.target.value)}
-          />
+          {token ? (
+            (name = user.userName)
+          ) : (
+            <input
+              placeholder="User name"
+              className="joininput"
+              type="text"
+              onChange={(event) => set_name(event.target.value)}
+            />
+          )}
         </div>
         <div>
           <select
@@ -27,16 +37,18 @@ export default function Join() {
             onChange={(event) => set_room(event.target.value)}
           >
             Choose a chatroom:
-            <option selected disabled value="choose a room"></option>
-            <option value="general">General</option>
-            <option value="birds">Birds</option>
-            <option value="bugs">Bugs</option>
-            <option value="snakes">Snakes</option>
-            <option value="turtles">Turtles</option>
-            <option value="otherreptiles">Other reptiles</option>
-            <option value="mammals">Mammals</option>
-            <option value="fish">Fish</option>
-            <option value="otheranimals">Other animals</option>
+            <option selected disabled>
+              choose a room
+            </option>
+            <option value="General">General</option>
+            <option value="Birds">Birds</option>
+            <option value="Bugs">Bugs</option>
+            <option value="Snakes">Snakes</option>
+            <option value="Turtles">Turtles</option>
+            <option value="OtherReptiles">Other reptiles</option>
+            <option value="Mammals">Mammals</option>
+            <option value="Fish">Fish</option>
+            <option value="OtherAnimals">Other animals</option>
           </select>
         </div>
         <Link

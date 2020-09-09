@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../store/user/selectors";
-import { selectToken } from "../../../store/user/selectors";
+import { selectUser, selectToken } from "../../../store/user/selectors";
 
 import "./Join.css";
 
@@ -11,9 +10,6 @@ export default function Join() {
   const [room, set_room] = useState("");
   const user = useSelector(selectUser);
   const token = useSelector(selectToken);
-
-  console.log("WHAT IS THE name????", name);
-  console.log("what is the username", user.userName);
 
   return (
     <div className="joinOuterContainer">

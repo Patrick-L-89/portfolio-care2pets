@@ -11,6 +11,7 @@ import Join from "./pages/Chat-app/Join/Join";
 import Chatroom from "./pages/Chat-app/Chatroom/Chatroom";
 import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
+import MyPets from "./pages/MyPets/MyPets";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,8 +28,9 @@ function App() {
         <Switch>
           <Route exact path="/home" component={Homepage} />
           <Route exact path="/joinchat" component={Join} />
-          <Route path="/chatroom" component={Chatroom}></Route>
+          <Route path="/chatroom" component={Chatroom} />
           <Route exact path="/about" component={Aboutpage} />
+          <Route exact path="/mypets" component={MyPets} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
         </Switch>

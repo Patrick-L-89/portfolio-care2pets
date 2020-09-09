@@ -28,7 +28,7 @@ export default function MyPets() {
       </Jumbotron>
       <MyPetsList
         key={myPet.id}
-        petName={myPet.PetName}
+        petName={myPet.petName}
         image={myPet.image}
         ownerUserName={user.userName}
         species={myPet.species}

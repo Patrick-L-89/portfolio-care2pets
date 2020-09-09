@@ -18,7 +18,7 @@ export default function Homepage() {
 
   const caretakerList = caretakers;
 
-  //console.log("what are my caretakers?", caretakers);
+  console.log("what are my caretakers?", caretakers);
 
   if (caretakerList === undefined) return "loading";
 
@@ -29,7 +29,6 @@ export default function Homepage() {
       </Jumbotron>
       <div className="outerCaretakerBox">
         {caretakerList.map((caretaker) => {
-          //console.log("WHAT IS A CARETAKER", caretaker);
           return (
             <CaretakerList
               key={caretaker.id}
@@ -37,7 +36,7 @@ export default function Homepage() {
               image={caretaker.image}
               animalSits={caretaker.animalsits}
               city={caretaker.city}
-              animalTypes={caretaker.animal_types_interested}
+              animalTypes={caretaker.animalTypesInterested}
               description={caretaker.description}
             />
           );

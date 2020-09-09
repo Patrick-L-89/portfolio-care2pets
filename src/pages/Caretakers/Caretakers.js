@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import CaretakerList from "./../../components/CaretakerList/CaretakerList";
+import CaretakerList from "../../components/CaretakerList/CaretakerList";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
-export default function Homepage() {
+export default function Caretakers() {
   const dispatch = useDispatch();
   const [caretakers, set_caretakers] = useState([]);
 

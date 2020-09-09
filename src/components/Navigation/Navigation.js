@@ -17,7 +17,7 @@ export default function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <div className="topnav">
-        <NavbarItem path="/home" linkText="Home" />
+        <NavbarItem path="/caretakers" linkText="Caretakers" />
         <NavbarItem path="/searchcaretakers" linkText="Search caretakers" />
         {token ? <NavbarItem path="/mypets" linkText="My Pets" /> : null}
         <NavbarItem path="/joinchat" linkText="Join chat" />

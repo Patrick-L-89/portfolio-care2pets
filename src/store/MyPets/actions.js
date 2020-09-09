@@ -7,12 +7,13 @@ const myPetsDetailsFetched = (myPets) => ({
   payload: myPets,
 });
 
-export const fetchmyPetsById = (id) => {
+export const fetchMyPetsById = (id) => {
   return async (dispatch, getState) => {
     const response = await axios.get(
       `http://localhost:4000/caretakers/mypets/${id}`
     );
+    console.log("WHAT IS MY response?", response.data);
     console.log(response);
-    dispatch(myPetsDetailsFetched(response.data.myPets));
+    dispatch(myPetsDetailsFetched(response.data.mypets));
   };
 };

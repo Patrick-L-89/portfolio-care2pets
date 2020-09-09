@@ -7,6 +7,7 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case MYPETS_DETAILS_FETCHED:
+      console.log("DOES MY CASE RUN??? DOES IT?");
       return { ...state, ...payload };
 
     default:

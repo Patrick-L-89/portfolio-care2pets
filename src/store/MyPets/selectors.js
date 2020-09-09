@@ -1,1 +1,1 @@
-export const selectmyPetsDetails = (state) => state.myPetsDetails;
+export const selectMyPetsDetails = (state) => state.myPetsDetails;

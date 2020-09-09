@@ -16,12 +16,12 @@ export default function Navigation() {
 
   return (
     <Navbar bg="light" expand="lg">
-      <div class="topnav">
+      <div className="topnav">
         <NavbarItem path="/home" linkText="Home" />
         <NavbarItem path="/searchcaretakers" linkText="Search caretakers" />
-        <NavbarItem path="/mypets" linkText="My pets" />
+        {token ? <NavbarItem path="/mypets" linkText="My Pets" /> : null}
         <NavbarItem path="/joinchat" linkText="Join chat" />
-        <NavbarItem path="/signup" linkText="Sign up" />
+        {token ? null : <NavbarItem path="/signup" linkText="Sign up" />}
         {loginLogoutControls}
         <NavbarItem path="/about" linkText="About" />
       </div>

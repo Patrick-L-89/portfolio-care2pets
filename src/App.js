@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAppLoading } from "./store/appState/selectors";
+import { getUserWithStoredToken } from "./store/user/actions";
+
 import Navigation from "./components/Navigation/Navigation";
 import Homepage from "./pages/Homepage/Homepage";
 import Aboutpage from "./pages/About/About";
@@ -9,6 +13,13 @@ import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 
 function App() {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectAppLoading);
+
+  useEffect(() => {
+    dispatch(getUserWithStoredToken());
+  }, [dispatch]);
+
   return (
     <div className="app">
       <Navigation />

@@ -1,13 +1,19 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectToken } from "../../store/user/selectors";
 import NavbarItem from "./NavbarItem";
 import "./Navigation.css";
+import LoggedIn from "./LoggedIn";
+import LoggedOut from "./loggedOut";
 
 import logo from "../../Icons/logo.png";
 
 export default function Navigation() {
+  const token = useSelector(selectToken);
+
+  const loginLogoutControls = token ? <LoggedIn /> : <LoggedOut />;
+
   return (
     <Navbar bg="light" expand="lg">
       <div class="topnav">
@@ -16,8 +22,8 @@ export default function Navigation() {
         <NavbarItem path="/mypets" linkText="My pets" />
         <NavbarItem path="/joinchat" linkText="Join chat" />
         <NavbarItem path="/signup" linkText="Sign up" />
+        {loginLogoutControls}
         <NavbarItem path="/about" linkText="About" />
-        <NavbarItem path="/login" linkText="log in" />
       </div>
     </Navbar>
   );

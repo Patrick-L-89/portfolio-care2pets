@@ -6,6 +6,7 @@ import Aboutpage from "./pages/About/About";
 import Join from "./pages/Chat-app/Join/Join";
 import Chatroom from "./pages/Chat-app/Chatroom/Chatroom";
 import Signup from "./pages/Signup/Signup";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/chatroom" component={Chatroom}></Route>
           <Route exact path="/about" component={Aboutpage} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
         </Switch>
       </div>
     </div>

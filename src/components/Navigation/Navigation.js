@@ -15,8 +15,9 @@ export default function Navigation() {
         <NavbarItem path="/searchcaretakers" linkText="Search caretakers" />
         <NavbarItem path="/mypets" linkText="My pets" />
         <NavbarItem path="/joinchat" linkText="Join chat" />
-        <NavbarItem path="/about" linkText="About" />
         <NavbarItem path="/signup" linkText="Sign up" />
+        <NavbarItem path="/about" linkText="About" />
+        <NavbarItem path="/login" linkText="log in" />
       </div>
     </Navbar>
   );

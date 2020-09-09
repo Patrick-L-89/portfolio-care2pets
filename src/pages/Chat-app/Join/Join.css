@@ -3,6 +3,8 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
+  color: green;
+  font-size: 40px;
 }
 
 #root {
@@ -24,6 +26,16 @@ body {
 
 .joinInnerContainer {
   width: 20%;
+}
+
+.joinSelect {
+  height: 100px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.joinOptions {
+  font-size: 20px;
 }
 
 .joinInput {

@@ -30,21 +30,24 @@ export default function Join() {
         <div>
           <select
             value={room}
+            className="joinSelect"
             onChange={(event) => set_room(event.target.value)}
           >
             Choose a chatroom:
-            <option selected disabled>
-              choose a room
-            </option>
-            <option value="General">General</option>
-            <option value="Birds">Birds</option>
-            <option value="Bugs">Bugs</option>
-            <option value="Snakes">Snakes</option>
-            <option value="Turtles">Turtles</option>
-            <option value="OtherReptiles">Other reptiles</option>
-            <option value="Mammals">Mammals</option>
-            <option value="Fish">Fish</option>
-            <option value="OtherAnimals">Other animals</option>
+            <optgroup className="joinOptions">
+              <option selected disabled value="">
+                choose a room:
+              </option>
+              <option value="General">General</option>
+              <option value="Birds">Birds</option>
+              <option value="Bugs">Bugs</option>
+              <option value="Snakes">Snakes</option>
+              <option value="Turtles">Turtles</option>
+              <option value="OtherReptiles">Other reptiles</option>
+              <option value="Mammals">Mammals</option>
+              <option value="Fish">Fish</option>
+              <option value="OtherAnimals">Other animals</option>
+            </optgroup>
           </select>
         </div>
         <Link

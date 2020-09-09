@@ -21,9 +21,11 @@ export default function Navigation() {
         <NavbarItem path="/searchcaretakers" linkText="Search caretakers" />
         {token ? <NavbarItem path="/mypets" linkText="My Pets" /> : null}
         <NavbarItem path="/joinchat" linkText="Join chat" />
+        <NavbarItem path="/about" linkText="About" />
         {token ? null : <NavbarItem path="/signup" linkText="Sign up" />}
         {loginLogoutControls}
-        <NavbarItem path="/about" linkText="About" />
+
+        <img src={logo} alt="Our beautiful logo" />
       </div>
     </Navbar>
   );

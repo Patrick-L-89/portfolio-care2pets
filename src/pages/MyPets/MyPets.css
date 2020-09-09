@@ -1,0 +1,16 @@
+.Pets img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  height: 400px;
+  width: 350px;
+  margin-left: 1px;
+  float: left;
+}
+
+.Pets ul {
+  list-style-type: none;
+  padding: 0;
+  float: center;
+  margin-left: 200px;
+}

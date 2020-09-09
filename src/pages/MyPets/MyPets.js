@@ -5,6 +5,7 @@ import { selectUser } from "../../store/user/selectors";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import { fetchMyPetsById } from "../../store/MyPets/actions";
 import { selectMyPetsDetails } from "../../store/MyPets/selectors";
+import "./MyPets.css";
 
 export default function MyPets() {
   const user = useSelector(selectUser);

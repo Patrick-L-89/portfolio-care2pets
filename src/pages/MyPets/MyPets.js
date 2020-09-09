@@ -8,16 +8,11 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 export default function MyPets() {
   const user = useSelector(selectUser);
   const [myPets, set_myPets] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
-    async function fetchMyPets() {
-      const response = await axios.get(
-        `http://localhost:4000/caretakers/mypets`
-      );
-      set_myPets(response.data.caretakers);
-    }
-    fetchMyPets();
-  }, []);
+    dispatch(fetchMyPetsById(id));
+  }, [dispatch, id]);
 
   return (
     <div>

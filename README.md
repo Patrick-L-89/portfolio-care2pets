@@ -2,11 +2,12 @@ Hello there, thank you for reading this.
 
 ## Table of contents
 
-[Introduction](#Introduction)
-[App Demo](#App-Demo)
-[Server](#server)
-[Technologies used](#Technologies-used)
-[Git Workflow](#Git-Workflow)
+- [Introduction](#Introduction)
+- [App Demo](#App-Demo)
+- [Server](#server)
+- [Technologies used](#Technologies-used)
+- [Git Workflow](#Git-Workflow)
+- [Set upp](#Set-up)
 
 ## Introduction
 
@@ -43,9 +44,9 @@ CSS, HTML, Bootstrap
 - I tried to use the most logical naming conventions for all the parts. This includes the branches, variables, component names, etc. I tried to make the app flow as logical as possible so future coders can easily find their feet if something ever needs to change, or when I will inevitably change some things.
 - There are many logical pull requests which have summaries and can be used to see my thinking and way of working.
 
-## Set upp
+## Set up
 
-Clone the app
-Cd into your project
-npm install
-npm start
+- Clone the app
+- Cd into your project
+- npm install
+- npm start

@@ -7,7 +7,7 @@ Hello there, thank you for reading this.
 - [Server](#server)
 - [Technologies used](#Technologies-used)
 - [Git Workflow](#Git-Workflow)
-- [Set upp](#Set-up)
+- [Set up](#Set-up)
 
 ## Introduction
 

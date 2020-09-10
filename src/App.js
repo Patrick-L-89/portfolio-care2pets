@@ -13,6 +13,7 @@ import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 import MyPets from "./pages/MyPets/MyPets";
 import Homepage from "./pages/Homepage/Homepage";
+import SearchCaretakers from "./pages/SearchCaretakers/SearchCaretakers";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/caretakers" component={Caretakers} />
+          <Route exact path="/searchcaretakers" component={SearchCaretakers} />
           <Route exact path="/joinchat" component={Join} />
           <Route path="/chatroom" component={Chatroom} />
           <Route exact path="/about" component={Aboutpage} />

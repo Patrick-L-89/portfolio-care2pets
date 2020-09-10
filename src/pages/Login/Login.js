@@ -7,6 +7,7 @@ import { selectToken } from "../../store/user/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import "./login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -32,12 +33,13 @@ export default function Login() {
   }
 
   return (
-    <Container>
+    <Container className="LoginContainer">
       <Form as={Col} md={{ span: 6, offset: 3 }} className="mt-5">
         <h1 className="mt-5 mb-5">Login</h1>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            classname="Email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
@@ -61,9 +63,6 @@ export default function Login() {
             Log in
           </Button>
         </Form.Group>
-        <Link to="/signup" style={{ textAlign: "center" }}>
-          Click here to sign up
-        </Link>
       </Form>
     </Container>
   );

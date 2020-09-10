@@ -7,6 +7,7 @@ import { selectToken } from "../../store/user/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import "./Signup.css";
 
 export default function SignUp() {
   const [fullName, set_fullName] = useState("");
@@ -63,11 +64,11 @@ export default function SignUp() {
   }
 
   return (
-    <Container>
+    <Container className="signupContainer">
       <Form as={Col} md={{ span: 6, offset: 3 }} className="mt-5">
         <h1 className="mt-5 mb-5">Signup</h1>
         <Form.Group controlId="formBasicfullName">
-          <Form.Label>Full name</Form.Label>
+          <Form.Label>Enter your full name</Form.Label>
           <Form.Control
             value={fullName}
             onChange={(event) => set_fullName(event.target.value)}
@@ -77,26 +78,26 @@ export default function SignUp() {
           />
         </Form.Group>
         <Form.Group controlId="formBasicuserName">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Enter your desired username</Form.Label>
           <Form.Control
             value={userName}
             onChange={(event) => set_userName(event.target.value)}
             type="text"
-            placeholder="Enter your desired user name"
+            placeholder="Enter your desired username"
             required
           />
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Enter your password</Form.Label>
           <Form.Control
             value={password}
             onChange={(event) => set_password(event.target.value)}
             type="password"
-            placeholder="type your Password"
+            placeholder="Enter your Password"
             required
           />
           <Form.Group controlId="formBasicstreet">
-            <Form.Label>Streetname</Form.Label>
+            <Form.Label>Enter your streetname</Form.Label>
             <Form.Control
               value={streetName}
               onChange={(event) => set_streetName(event.target.value)}
@@ -105,7 +106,7 @@ export default function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasiccity">
-            <Form.Label>City</Form.Label>
+            <Form.Label>Enter your city</Form.Label>
             <Form.Control
               value={city}
               onChange={(event) => set_city(event.target.value)}
@@ -115,30 +116,30 @@ export default function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasichouseNumber">
-            <Form.Label>House number</Form.Label>
+            <Form.Label>Fill in your housenumber</Form.Label>
             <Form.Control
               value={houseNumber}
               onChange={(event) => set_houseNumber(event.target.value)}
               type="text"
-              placeholder="Enter your housenumber and extension"
+              placeholder="Fill in your housenumber"
             />
           </Form.Group>
           <Form.Group controlId="formBasicphoneNumber">
-            <Form.Label>Phone number</Form.Label>
+            <Form.Label>Fill in your phonenumber</Form.Label>
             <Form.Control
               value={phoneNumber}
               onChange={(event) => set_phoneNumber(event.target.value)}
               type="number"
-              placeholder="Enter your phonenumber"
+              placeholder="Fill in your phonenumber"
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Enter your email address</Form.Label>
             <Form.Control
               value={email}
               onChange={(event) => set_email(event.target.value)}
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email adress"
               required
             />
             <Form.Text className="text-muted">
@@ -155,7 +156,7 @@ export default function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicanimalTypesInterested">
-            <Form.Label>Animal types interested in:</Form.Label>
+            <Form.Label>Animal types you are interested in:</Form.Label>
             <Form.Control
               value={animalTypesInterested}
               onChange={(event) =>
@@ -167,12 +168,12 @@ export default function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicdescription">
-            <Form.Label>Description</Form.Label>
+            <Form.Label>Enter a short description of yourself</Form.Label>
             <Form.Control
               value={description}
               onChange={(event) => set_description(event.target.value)}
               type="text"
-              placeholder="Enter a description of yourself for others to see"
+              placeholder="Enter a short description of yourself"
             />
           </Form.Group>
         </Form.Group>
@@ -181,7 +182,6 @@ export default function SignUp() {
             Sign up
           </Button>
         </Form.Group>
-        <Link to="/login">Click here to log in</Link>
       </Form>
     </Container>
   );

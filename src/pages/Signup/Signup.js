@@ -66,7 +66,7 @@ export default function SignUp() {
     <Container>
       <Form as={Col} md={{ span: 6, offset: 3 }} className="mt-5">
         <h1 className="mt-5 mb-5">Signup</h1>
-        <Form.Group controlId="formBasicName">
+        <Form.Group controlId="formBasicfullName">
           <Form.Label>Full name</Form.Label>
           <Form.Control
             value={fullName}
@@ -76,7 +76,7 @@ export default function SignUp() {
             required
           />
         </Form.Group>
-        <Form.Group controlId="formBasicName">
+        <Form.Group controlId="formBasicuserName">
           <Form.Label>Username</Form.Label>
           <Form.Control
             value={userName}
@@ -95,7 +95,7 @@ export default function SignUp() {
             placeholder="type your Password"
             required
           />
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasicstreet">
             <Form.Label>Streetname</Form.Label>
             <Form.Control
               value={streetName}
@@ -104,7 +104,7 @@ export default function SignUp() {
               placeholder="Enter your streetname"
             />
           </Form.Group>
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasiccity">
             <Form.Label>City</Form.Label>
             <Form.Control
               value={city}
@@ -114,7 +114,7 @@ export default function SignUp() {
               required
             />
           </Form.Group>
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasichouseNumber">
             <Form.Label>House number</Form.Label>
             <Form.Control
               value={houseNumber}
@@ -123,7 +123,7 @@ export default function SignUp() {
               placeholder="Enter your housenumber and extension"
             />
           </Form.Group>
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasicphoneNumber">
             <Form.Label>Phone number</Form.Label>
             <Form.Control
               value={phoneNumber}
@@ -146,7 +146,7 @@ export default function SignUp() {
             </Form.Text>
           </Form.Group>
 
-          <Form.Group controlId="formBasicisArtist">
+          <Form.Group controlId="formBasicisCaretaker">
             <Form.Label>Are you interested in taking care of pets?</Form.Label>
             <Form.Control
               value={isCaretaker}
@@ -154,7 +154,7 @@ export default function SignUp() {
               type="checkbox"
             />
           </Form.Group>
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasicanimalTypesInterested">
             <Form.Label>Animal types interested in:</Form.Label>
             <Form.Control
               value={animalTypesInterested}
@@ -166,7 +166,7 @@ export default function SignUp() {
               required
             />
           </Form.Group>
-          <Form.Group controlId="formBasicName">
+          <Form.Group controlId="formBasicdescription">
             <Form.Label>Description</Form.Label>
             <Form.Control
               value={description}

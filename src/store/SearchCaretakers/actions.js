@@ -12,8 +12,7 @@ export const fetchCaretakersByAnimalType = (animalTypeFilter) => {
     const response = await axios.get(
       `http://localhost:4000/caretakers/${animalTypeFilter}`
     );
-    console.log("WHAT IS MY response?", response.data);
-    console.log(response);
-    dispatch(searchCaretakersFetched(response.data));
+    console.log("WHAT IS MY response?", response.data.searchCaretakers);
+    dispatch(searchCaretakersFetched(response.data.searchCaretakers));
   };
 };

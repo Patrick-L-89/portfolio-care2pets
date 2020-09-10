@@ -18,7 +18,7 @@ export default function Caretakers() {
 
   const caretakerList = caretakers;
 
-  console.log("what are my caretakers?", caretakers);
+  console.log("what is my caretakerList?", caretakerList);
 
   if (caretakerList === undefined) return "loading";
 
@@ -29,6 +29,7 @@ export default function Caretakers() {
       </Jumbotron>
       <div className="outerCaretakerBox">
         {caretakerList.map((caretaker) => {
+          console.log("WHAT IS A INDIVICUAL CARETAKER?", caretaker);
           return (
             <CaretakerList
               key={caretaker.id}

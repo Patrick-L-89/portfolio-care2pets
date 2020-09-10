@@ -1,34 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCaretakersByAnimalType } from "../../store/SearchCaretakers/actions";
 import CaretakerList from "../../components/CaretakerList/CaretakerList";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import fetchCaretakersByAnimalType from "../../store/SearchCaretakers/actions";
+import { selectSearchCaretakers } from "../../store/SearchCaretakers/selectors";
 
 export default function Caretakers() {
   const dispatch = useDispatch();
-  const [caretakers, set_caretakers] = useState([]);
-  const [animalTypeFilter, set_animalTypeFilter] = useState([]);
-
-  function filterCaretakers(event) {
-    event.preventDefault();
-
-    dispatch(fetchCaretakersByAnimalType(animalTypeFilter));
-  }
+  const [animalTypeFilter, set_animalTypeFilter] = useState("birds");
+  const searchCaretakers = useSelector(selectSearchCaretakers);
 
   useEffect(() => {
-    async function fetchCaretakers() {
-      const response = await axios.get(`http://localhost:4000/caretakers`);
-      set_caretakers(response.data.caretakers);
-    }
-    fetchCaretakers();
-  }, []);
+    dispatch(fetchCaretakersByAnimalType(animalTypeFilter));
+  }, [dispatch, animalTypeFilter]);
 
-  const caretakerList = caretakers;
-
-  if (caretakerList === undefined) return "loading";
-
-  console.log("WHAT ARE MY FILTERS?", animalTypeFilter);
+  console.log("WHAT IS searchCaretakers", searchCaretakers);
 
   return (
     <div>
@@ -95,7 +81,8 @@ export default function Caretakers() {
         Other animals
       </div>
       <div className="outerCaretakerBox">
-        {caretakerList.map((caretaker) => {
+        {searchCaretakers.map((caretaker) => {
+          console.log("GIVE ME MY CARETAKERS!!!", caretaker);
           return (
             <CaretakerList
               key={caretaker.id}

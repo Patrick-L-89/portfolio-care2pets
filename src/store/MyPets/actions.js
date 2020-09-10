@@ -12,8 +12,6 @@ export const fetchMyPetsById = (id) => {
     const response = await axios.get(
       `http://localhost:4000/caretakers/mypets/${id}`
     );
-    console.log("WHAT IS MY response?", response.data);
-    console.log(response);
     dispatch(myPetsDetailsFetched(response.data.mypets));
   };
 };

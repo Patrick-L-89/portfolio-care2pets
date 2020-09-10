@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello there, thank you for reading this.
 
-## Available Scripts
+These lines of code are the result of my portfolio project which i made in Codaisseur. The goal of this Portfolio is to show you a few of the things I can do with regards to coding. So without further ado, let's get into this.
 
-In the project directory, you can run:
+The react app I made is for people with exotic pets. If you have some special pets you want to take good care of them. Maybe you are leaving with your familie and need someone to look after your special pet. Care for these kinds of animals is very different then for something more traditional like a dog. So this is where my app comes in. Here you can find some amazing people who are caretakers of their own animals.
 
-### `npm start`
+You can do a few things on the site.
+The first thing you might want to do is look at it's memebers. You can see them under the heading "caretakers"
+If you are looking for caretakers of a particular animal, you can sort them by animal type.
+Maybe you want to take care of animals yourself? Why not sign up and make your own profile?
+If you made your profile, you can join the chat and your profile name will be loaded automatically. If you would rather not log in you can simply join with a self chosen username. There are several chatgroups so you can find what you're interested in.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Intially the scope and size of the webApp was very different. I planned to have an integrated Google API, but a chat app was a much better fit for the website. So the wireframe itself is no longer representative of the final product. It can be seen here [wireframe](https://wireframe.cc/dvThS6)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+There is also a canban board for this project, but it was not kept up as vigourisly as it should have been. This is mostly because I had to move away from the Google API and decided to use a chat app. [Project Board](https://github.com/users/Patrick-L-89/projects/1)
 
-### `npm test`
+## Table of contents
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[App Demo](#App Demo)
+[Server](#server)
+[Technologies used](#Technologies used)
+[Git Workflow](#Git Workflow)
 
-### `npm run build`
+## App demo
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Server
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You can find the server for this app [here](https://github.com/Patrick-L-89/portfolio_backend).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies used
 
-### `npm run eject`
+React, React Router DOM
+Redux, Redux-Thunk
+React Geocode, Google Maps API,GoogleComponent
+CSS, HTML, Bootstrap
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Git Workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- In this build I used several branches. This is to show that I understand how to work in a project flow where different people work on several branches at the same time.
+- I tried to use the most logical naming conventions for all the parts. This includes the branches, variables, component names, etc. I tried to make the app flow as logical as possible so future coders can easily find their feet if something ever needs to change, or when I will inevitably change some things.
+- There are many logical pull requests which have summaries and can be used to see my thinking and way of working.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Set upp
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Clone the app
+Cd into your project
+npm install
+npm start

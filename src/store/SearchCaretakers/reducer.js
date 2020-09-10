@@ -1,12 +1,13 @@
-import { MYPETS_DETAILS_FETCHED } from "./actions";
+import { SEARCH_CARETAKERS_FETCHED } from "./actions";
 
 const initialState = {
-  myPets: [],
+  searchCaretakers: [],
 };
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case MYPETS_DETAILS_FETCHED:
+    case SEARCH_CARETAKERS_FETCHED:
+      console.log("DOES MY CASE RUN??? DOES IT?");
       return { ...state, ...payload };
 
     default:

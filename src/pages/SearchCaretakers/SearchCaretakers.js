@@ -3,11 +3,18 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import CaretakerList from "../../components/CaretakerList/CaretakerList";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import fetchCaretakersByAnimalType from "../../store/SearchCaretakers/actions";
 
 export default function Caretakers() {
   const dispatch = useDispatch();
   const [caretakers, set_caretakers] = useState([]);
   const [animalTypeFilter, set_animalTypeFilter] = useState([]);
+
+  function filterCaretakers(event) {
+    event.preventDefault();
+
+    dispatch(fetchCaretakersByAnimalType(animalTypeFilter));
+  }
 
   useEffect(() => {
     async function fetchCaretakers() {

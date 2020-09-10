@@ -11,7 +11,7 @@ Hello there, thank you for reading this.
 
 ## Introduction
 
-These lines of code are the result of my portfolio project which i made in Codaisseur. The goal of this Portfolio is to show you a few of the things I can do with regards to coding. So without further ado, let's get into this.
+These lines of code are the result of my portfolio project which I made during my education at Codaisseur. The goal of this Portfolio is to show you a few of the things I can do with regards to coding. So without further ado, let's get into this.
 
 The react app I made is for people with exotic pets. If you have some special pets you want to take good care of them. Maybe you are leaving with your familie and need someone to look after your special pet. Care for these kinds of animals is very different then for something more traditional like a dog. So this is where my app comes in. Here you can find some amazing people who are caretakers of their own animals.
 

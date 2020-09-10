@@ -1,5 +1,15 @@
 Hello there, thank you for reading this.
 
+## Table of contents
+
+[Introduction](#Introduction)
+[App Demo](#App-Demo)
+[Server](#server)
+[Technologies used](#Technologies-used)
+[Git Workflow](#Git-Workflow)
+
+## Introduction
+
 These lines of code are the result of my portfolio project which i made in Codaisseur. The goal of this Portfolio is to show you a few of the things I can do with regards to coding. So without further ado, let's get into this.
 
 The react app I made is for people with exotic pets. If you have some special pets you want to take good care of them. Maybe you are leaving with your familie and need someone to look after your special pet. Care for these kinds of animals is very different then for something more traditional like a dog. So this is where my app comes in. Here you can find some amazing people who are caretakers of their own animals.
@@ -14,13 +24,6 @@ Intially the scope and size of the webApp was very different. I planned to have 
 
 There is also a canban board for this project, but it was not kept up as vigourisly as it should have been. This is mostly because I had to move away from the Google API and decided to use a chat app. [Project Board](https://github.com/users/Patrick-L-89/projects/1)
 
-## Table of contents
-
-[App Demo](#App Demo)
-[Server](#server)
-[Technologies used](#Technologies used)
-[Git Workflow](#Git Workflow)
-
 ## App demo
 
 ## Server
@@ -31,7 +34,7 @@ You can find the server for this app [here](https://github.com/Patrick-L-89/port
 
 React, React Router DOM
 Redux, Redux-Thunk
-React Geocode, Google Maps API,GoogleComponent
+sockets.io
 CSS, HTML, Bootstrap
 
 ## Git Workflow
